@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 15px;
+    background-color: var(--very-light-gray);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+
+
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+
+}
+
+
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 2rem;
+
+}
+
+.box1 {
+    background-color: var(--bright-orange);
+}
+
+.box2 {
+    background-color: var(--dark-cyan);
+}
+
+.box3 {
+    background-color: var(--very-dark-cyan);
+}
+
+.box {
+    padding: 40px;
+}
+
+.box>* {
+    margin: 18px 0;
+}
+
+.box h2 {
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    color: var(--very-light-gray);
+    font-size: 30px;
+}
+
+.box p {
+    color: var(--transparent-white);
+    line-height: 1.6;
+
+}
+
+.box a {
+    text-decoration: none;
+    background-color: var(--very-light-gray);
+    padding: 13px 27px;
+    border-radius: 26px;
+    margin-top: 60px;
+    display: inline-block;
+    border: 2px solid var(--very-light-gray);
+    transition: all .4s ease-in-out;
+}
+
+.box1 a {
+    color: var(--bright-orange);
+}
+
+.box2 a {
+    color: var(--dark-cyan);
+}
+
+.box3 a {
+    color: var(--very-dark-cyan);
+}
+
+.box a:hover {
+    color: var(--very-light-gray);
+    background: transparent;
+}
+
+@media only screen and (max-width:768px) {
+    .wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width:425px) {
+    .wrapper {
+        margin: 4rem 1.5rem;
+    }
+
+    .box a {
+        margin-top: 5px;
+    }
+
+
+}
